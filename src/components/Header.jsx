@@ -155,7 +155,7 @@ const HeaderSearch = styled.div`
   bottom: -65%;
   width: 100%;
   vertical-align: center;
-  z-index: 2;
+  z-index: 99;
 
   > article {
     ${flexCenter()};
@@ -202,4 +202,5 @@ const Options = styled.div`
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   width: min(100%, 200px);
+  z-index: 999;
 `;
