@@ -24,10 +24,13 @@ const Header = () => {
   const [destination, setDestination] = useState("");
   const navigate = useNavigate();
 
-  const handleOption = (item, operation) => {
+  const handleOption = (e, item, operation) => {
+    e.preventDefault();
+    e.stopPropagation();
+
     setOptions((prev) => ({
       ...prev,
-      [item]: operation === "inc" ? prev[item]++ : prev[item]--,
+      [item]: operation === "inc" ? prev[item] + 1 : prev[item] - 1,
     }));
   };
 

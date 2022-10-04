@@ -9,11 +9,11 @@ const Option = ({title, options, handleOption}) => {
       <span className="item-func">
         <button
           disabled={options[title] <= 1}
-          onClick={() => handleOption(title, "dec")}>
+          onClick={(e) => handleOption(e, title, "dec")}>
           -
         </button>
         <span>{options[title]}</span>
-        <button onClick={() => handleOption(title, "inc")}>+</button>
+        <button onClick={(e) => handleOption(e, title, "inc")}>+</button>
       </span>
     </OptionItem>
   );
