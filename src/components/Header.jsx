@@ -24,10 +24,7 @@ const Header = () => {
   const [destination, setDestination] = useState("");
   const navigate = useNavigate();
 
-  const handleOption = (e, item, operation) => {
-    e.preventDefault();
-    e.stopPropagation();
-
+  const handleOption = (item, operation) => {
     setOptions((prev) => ({
       ...prev,
       [item]: operation === "inc" ? prev[item] + 1 : prev[item] - 1,
