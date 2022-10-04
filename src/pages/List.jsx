@@ -25,8 +25,8 @@ const List = () => {
             </div>
             <div className="formInput">
               <label htmlFor="dest">Check-in Date</label>
-              <span>{`${date && date[0].startDate} 
-                  to ${date && date[0].endDate}`}</span>
+              <span>{`${date && new Date(date[0].startDate).toLocaleDateString()} 
+                  to ${date && new Date(date[0].endDate).toLocaleDateString()}`}</span>
             </div>
           </SearchForm>
           <h3 className="title">Options</h3>
@@ -45,7 +45,11 @@ const List = () => {
             </OptionItem>
             <OptionItem>
               <span className="text">Adult :</span>
-              <input type="number" min={1} placeholder={`${options && options.adult}`} />
+              <input
+                type="number"
+                min={1}
+                placeholder={`${options && options.adult}`}
+              />
             </OptionItem>
             <OptionItem>
               <span className="text">Children :</span>
@@ -57,7 +61,11 @@ const List = () => {
             </OptionItem>
             <OptionItem>
               <span className="text">Room :</span>
-              <input type="number" min={1} placeholder={`${options && options.room}`} />
+              <input
+                type="number"
+                min={1}
+                placeholder={`${options && options.room}`}
+              />
             </OptionItem>
             <button>Search</button>
           </SearchOptions>

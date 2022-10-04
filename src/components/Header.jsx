@@ -174,6 +174,7 @@ const HeaderSearch = styled.div`
     .date {
       position: absolute;
       top: 100%;
+      right: 0;
     }
   }
 
